@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Item implements Serializable {
+public class Item {
     private String skuCode;
     private double price;
     private int quantity;
