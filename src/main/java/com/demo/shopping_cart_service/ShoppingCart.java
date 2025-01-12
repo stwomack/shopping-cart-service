@@ -6,11 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.processing.Generated;
 import java.io.Serializable;
 import java.util.List;
 
-@RedisHash("shopping_carts")
+@RedisHash("shoppingcart")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,5 +17,4 @@ public class ShoppingCart implements Serializable {
     @Id
     private String userId;
     private List<Item> items;
-
 }

@@ -3,6 +3,7 @@ package com.demo.shopping_cart_service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,6 @@ import java.util.UUID;
 @Service
 @EnableScheduling
 public class ShoppingCartService {
-
     private final Logger log = LoggerFactory.getLogger(ShoppingCartService.class);
 
     @Autowired
@@ -27,6 +27,7 @@ public class ShoppingCartService {
         ShoppingCart cart = new ShoppingCart(userId, generateRandomItems());
         log.info("Adding Cart: {}", cart.toString());
         cartRepository.save(cart);
+        log.info("Getting Cart: {}", getCart(userId));
     }
 
     public ShoppingCart getCart(String userId) {
@@ -53,7 +54,7 @@ public class ShoppingCartService {
 
     private String generateRandomSkuCode() {
         // Example: Generate a 6-character random alphanumeric code
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 6; i++) {
             int index = (int) (Math.random() * chars.length());
