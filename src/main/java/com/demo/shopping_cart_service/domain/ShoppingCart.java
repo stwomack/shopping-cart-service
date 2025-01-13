@@ -1,4 +1,4 @@
-package com.demo.shopping_cart_service;
+package com.demo.shopping_cart_service.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;

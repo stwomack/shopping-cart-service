@@ -1,4 +1,4 @@
-package com.demo.shopping_cart_service;
+package com.demo.shopping_cart_service.domain;
 
 import java.io.Serializable;
 

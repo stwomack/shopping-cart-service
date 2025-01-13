@@ -1,5 +1,7 @@
 package com.demo.shopping_cart_service;
 
+import com.demo.shopping_cart_service.domain.Item;
+import com.demo.shopping_cart_service.domain.ShoppingCart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,8 @@
-package com.demo.shopping_cart_service;
+package com.demo.shopping_cart_service.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
