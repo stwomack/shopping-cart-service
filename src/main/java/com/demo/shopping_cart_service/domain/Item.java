@@ -11,4 +11,5 @@ public class Item {
     private String skuCode;
     private double price;
     private int quantity;
+    private AnyObject anyObject;
 }
